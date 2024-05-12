@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /* primary color */
+      --Lime-Green: 163, 72%, 41%;
+      --Bright-Red: 356, 69%, 56%;
+      --ToggleLight: 230, 22%, 74%;
+
+      /* Dark theme colors */
+      --TopPattern: 232, 19%, 15%;
+      --MainBody: 225, 17%, 14%;
+      --TextColor: 120, 100%, 100%;
+      --CardBg: 228, 29%, 20%;
+      --ToggleBg: linear-gradient(to hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+      --CardHover: 228, 26%, 27%;
+      --FollowersTxt: 229, 20%, 37%;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      /* primary color */
+      --Lime-Green: 163, 72%, 41%;
+      --Bright-Red: 356, 69%, 56%;
+      --ToggleLight: 230, 22%, 74%;
+
+      /* Light theme colors */
+      --TopPattern: 230, 75%, 98%;
+      --MainBody: 0, 0%, 100%;
+      --TextColor: 225, 18%, 13%;
+      --CardBg: 222, 50%, 96%;
+      --ToggleBg: 230, 23%, 74%;
+      --CardHover: 232, 33%, 91%;
+      --FollowersTxt: 231, 12%, 77%;
+    }
+  }
+}
