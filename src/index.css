@@ -8,6 +8,42 @@
     font-family: "Inter", sans-serif;
   }
 
+  #check {
+    display: none;
+
+    &:checked + ::before {
+      left: 55px;
+    }
+  }
+
+  #card:hover {
+    background: hsl(var(--CardHover));
+    transition: all 0.25s ease-in-out;
+  }
+
+  label {
+    z-index: 1000;
+    color: transparent;
+    padding-block: 11px;
+    padding-inline: 7px;
+    border-radius: 3pc;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 5.7px;
+      left: 6px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: hsl(var(--CardBg));
+      transition: left 0.35s ease-in-out;
+      z-index: 1001;
+    }
+  }
+
   @media (prefers-color-scheme: dark) {
     :root {
       /* primary color */
@@ -22,7 +58,7 @@
       --CardBg: 228, 29%, 20%;
       --ToggleBg: linear-gradient(to hsl(210, 78%, 56%), hsl(146, 68%, 55%));
       --CardHover: 228, 26%, 27%;
-      --FollowersTxt: 229, 20%, 37%;
+      --FollowersTxt: 226, 18%, 51%;
     }
   }
 
