@@ -2,18 +2,30 @@ import React from "react";
 import Header from "./components/Header";
 import Head from "./components/Head";
 import TopCards from "./components/TopCards";
-import data from "./Data.json";
+import data from "./cardsData/Data.json";
+import secondData from "./cardsData/SecondData.json";
+import BottomCards from "./components/BottomCards";
 
 const App = () => {
   return (
-    <main className="w-screen h-screen relative pt-11 bg-mainbody">
+    <main className="w-screen h-screen relative bg-mainbody overflow-auto">
       <Header />
-      <section id="mainContainer" className="w-[80%] mx-auto">
+      <section id="mainContainer" className="w-[80%] mx-auto absolute">
         <Head />
-        <section id="upperCardsBody" className="mt-6 grid grid-cols-4 gap-11">
-          {data.map((elements) => {
-            return <TopCards key={elements.uniqueId} cards={elements} />;
-          })}
+        <section className="mt-6 grid ssm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-11">
+          {data.map((elements) => (
+            <TopCards key={elements.uniqueId} cards={elements} />
+          ))}
+        </section>
+        <section className="mt-10">
+          <h1 className="font-semibold text-txtcolor text-3xl">
+            Overview - Today
+          </h1>
+          <div className="grid ssm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-8 gap-x-11 mt-4 xl:grid-cols-4">
+            {secondData.map((elements) => (
+              <BottomCards key={elements.uniqueId} cards={elements} />
+            ))}
+          </div>
         </section>
       </section>
     </main>

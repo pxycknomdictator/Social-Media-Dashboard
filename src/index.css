@@ -8,40 +8,70 @@
     font-family: "Inter", sans-serif;
   }
 
-  #check {
-    display: none;
+  @media (min-width: 320px) {
+    #mainContainer {
+      top: 1400px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
 
-    &:checked + ::before {
-      left: 55px;
+    label {
+      z-index: 1000;
+      color: transparent;
+      padding-block: 5px;
+      padding-inline: 0px;
+      border-radius: 3pc;
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 4.78px;
+        left: 6px;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background: hsl(var(--CardBg));
+        transition: left 0.35s ease-in-out;
+        z-index: 1001;
+      }
+    }
+
+    #check {
+      display: none;
+
+      &:checked + ::before {
+        left: 47px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    #mainContainer {
+      top: 800px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @media (min-width: 1024px) {
+    #mainContainer {
+      top: 800px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @media (min-width: 1280px) {
+    #mainContainer {
+      top: 400px;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 
   #card:hover {
     background: hsl(var(--CardHover));
     transition: all 0.25s ease-in-out;
-  }
-
-  label {
-    z-index: 1000;
-    color: transparent;
-    padding-block: 11px;
-    padding-inline: 7px;
-    border-radius: 3pc;
-    position: relative;
-    cursor: pointer;
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 5.7px;
-      left: 6px;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: hsl(var(--CardBg));
-      transition: left 0.35s ease-in-out;
-      z-index: 1001;
-    }
   }
 
   @media (prefers-color-scheme: dark) {

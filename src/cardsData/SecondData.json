@@ -1,0 +1,75 @@
+[
+  {
+    "uniqueId": 1,
+    "title": "Page Views",
+    "platformIcon": "./images/icon-facebook.svg",
+    "followers": 87,
+    "arrowIcon": "./images/icon-up.svg",
+    "followersToday": "3%",
+    "followColors": "limeGreen"
+  },
+
+  {
+    "uniqueId": 2,
+    "title": "Likes",
+    "platformIcon": "./images/icon-facebook.svg",
+    "followers": 52,
+    "arrowIcon": "./images/icon-down.svg",
+    "followersToday": "2%",
+    "followColors": "brightRed"
+  },
+  {
+    "uniqueId": 3,
+    "title": "Likes",
+    "platformIcon": "./images/icon-instagram.svg",
+    "followers": 5462,
+    "arrowIcon": "./images/icon-up.svg",
+    "followersToday": "2257%",
+    "followColors": "limeGreen"
+  },
+  {
+    "uniqueId": 4,
+    "title": "Profile Views",
+    "platformIcon": "./images/icon-instagram.svg",
+    "followers": "52k",
+    "arrowIcon": "./images/icon-up.svg",
+    "followersToday": "1375%",
+    "followColors": "limeGreen"
+  },
+  {
+    "uniqueId": 5,
+    "title": "Retweets",
+    "platformIcon": "./images/icon-twitter.svg",
+    "followers": 117,
+    "arrowIcon": "./images/icon-up.svg",
+    "followersToday": "303%",
+    "followColors": "limeGreen"
+  },
+  {
+    "uniqueId": 6,
+    "title": "Likes",
+    "platformIcon": "./images/icon-twitter.svg",
+    "followers": 507,
+    "arrowIcon": "./images/icon-up.svg",
+    "followersToday": "553%",
+    "followColors": "limeGreen"
+  },
+  {
+    "uniqueId": 7,
+    "title": "Likes",
+    "platformIcon": "./images/icon-youtube.svg",
+    "followers": 107,
+    "arrowIcon": "./images/icon-down.svg",
+    "followersToday": "19%",
+    "followColors": "brightRed"
+  },
+  {
+    "uniqueId": 8,
+    "title": "Total Views",
+    "platformIcon": "./images/icon-youtube.svg",
+    "followers": 1407,
+    "arrowIcon": "./images/icon-down.svg",
+    "followersToday": "12%",
+    "followColors": "brightRed"
+  }
+]

@@ -13,8 +13,21 @@ const TopCards = ({ cards }) => {
   } = cards;
 
   return (
-    <div className={`pt-[5px] rounded-md bg-${platform} cursor-pointer`}>
-      <div id="card" className="bg-cardbg py-6 text-center">
+    <div
+      className={`pt-2 overflow-hidden rounded-md ${
+        platform === "facebook"
+          ? "bg-facebook"
+          : platform === "twitter"
+          ? "bg-twitter"
+          : platform === "instagram"
+          ? "bg-instagram"
+          : platform === "youtube"
+          ? "bg-youtube"
+          : "null"
+      }
+    cursor-pointer`}
+    >
+      <div className="bg-cardbg py-6 text-center hover:bg-cardhover ease-in-out transition-all">
         <figure className="flex items-center justify-center gap-3">
           <img src={platformIcon} className="inline" alt="facebook" />
           <span className="text-followers font-semibold">{userName}</span>
