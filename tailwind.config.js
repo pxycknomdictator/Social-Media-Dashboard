@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     screens: {
       ssm: "320px",
@@ -30,16 +31,6 @@ export default {
         facebook: "hsl(208, 92%, 53%)",
         twitter: "hsl(203, 89%, 53%)",
         youtube: "hsl(348, 97%, 39%)",
-
-        // Actual colors
-        toppattern: "hsl(var(--TopPattern))",
-        mainbody: "hsl(var(--MainBody))",
-        txtcolor: "hsl(var(--TextColor))",
-        cardbg: "hsl(var(--CardBg))",
-        togglebg: "hsl(var(--ToggleBg))",
-        cardhover: "hsl(var(--CardHover))",
-        followers: "hsl(var(--FollowersTxt))",
-
         limeGreen: "hsl(var(--Lime-Green))",
         brightRed: "hsl(var(--Bright-Red))",
         toggleButton: "hsl(var(--ToggleLight))",

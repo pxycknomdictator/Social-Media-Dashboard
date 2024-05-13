@@ -27,15 +27,17 @@ const TopCards = ({ cards }) => {
       }
     cursor-pointer`}
     >
-      <div className="bg-cardbg py-6 text-center hover:bg-cardhover ease-in-out transition-all">
+      <div className="bg-[#f0f3fa] dark:bg-[#242a42] py-6 text-center hover:bg-[#e0e2f0] dark:hover:bg-[#333a57] ease-in-out transition-all">
         <figure className="flex items-center justify-center gap-3">
           <img src={platformIcon} className="inline" alt="facebook" />
-          <span className="text-followers font-semibold">{userName}</span>
+          <span className="text-[#bdbfcb] dark:text-[#6c7699] font-semibold">
+            {userName}
+          </span>
         </figure>
-        <h1 className="font-semibold text-txtcolor text-6xl mt-[1.5rem]">
+        <h1 className="font-semibold text-[#1b1e27] dark:text-[#ffffff] text-6xl mt-[1.5rem]">
           {followers}
         </h1>
-        <span className="inline-block text-followers font-semibold mt-1 tracking-[4px]">
+        <span className="inline-block text-[#bdbfcb] dark:text-[#6c7699] font-semibold mt-1 tracking-[4px]">
           {followTitle}
         </span>
         <div className="flex items-center justify-center gap-1 mt-6">

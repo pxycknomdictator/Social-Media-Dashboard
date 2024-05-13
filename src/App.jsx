@@ -8,7 +8,7 @@ import BottomCards from "./components/BottomCards";
 
 const App = () => {
   return (
-    <main className="w-screen h-screen relative bg-mainbody overflow-auto">
+    <main className="w-screen h-screen relative bg-[#ffffff] dark:bg-[#1e212a] overflow-auto">
       <Header />
       <section id="mainContainer" className="w-[80%] mx-auto absolute">
         <Head />
@@ -18,7 +18,7 @@ const App = () => {
           ))}
         </section>
         <section className="mt-10">
-          <h1 className="font-semibold text-txtcolor text-3xl">
+          <h1 className="font-semibold  text-[#1b1e27] dark:text-[#ffffff] text-3xl">
             Overview - Today
           </h1>
           <div className="grid ssm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-y-8 gap-x-11 mt-4 xl:grid-cols-4">
