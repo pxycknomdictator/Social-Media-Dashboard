@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Head = () => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    const rootElement = document.documentElement;
+    rootElement.classList.add(theme);
+    rootElement.classList.remove(theme === "light" ? "dark" : "light");
+  }, [theme]);
+
+  const handleThemes = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <header className="flex justify-between items-center ssm:flex-col ssm:items-start ssm:gap-[1.5rem] xl:flex-row">
       <div className="xl:w-[80%]">
@@ -12,9 +26,15 @@ const Head = () => {
         </span>
       </div>
       <div className="ssm:border-t ssm:border-followers ssm:w-full ssm:pt-6 ssm:justify-between ssm:flex ssm:items-center xl:border-none xl:justify-end">
-        <span className="text-[#bdbfcb] dark:text-[#6c7699] font-extrabold mr-4">Dark Mode</span>
+        <span className="text-[#bdbfcb] dark:text-[#6c7699] font-extrabold mr-4">
+          Dark Mode
+        </span>
         <input type="checkbox" id="check" />
-        <label className="bg-[#adb3cc] dark:bg-ToggleDark dark:before:bg-[#1e212a]" htmlFor="check">
+        <label
+          onClick={handleThemes}
+          className="bg-[#adb3cc] dark:bg-ToggleDark dark:before:bg-[#1e212a]"
+          htmlFor="check"
+        >
           ToggleBtn
         </label>
       </div>

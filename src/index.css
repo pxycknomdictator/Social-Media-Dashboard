@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html,
+  body {
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    transition: all 0.25s ease-in-out;
   }
 
   @media (min-width: 320px) {
@@ -28,7 +30,7 @@
         position: absolute;
         content: "";
         top: 4.78px;
-        left: 6px;
+        left: 47px;
         width: 25px;
         height: 25px;
         border-radius: 50%;
@@ -42,7 +44,7 @@
       display: none;
 
       &:checked + ::before {
-        left: 47px;
+        left: 6px;
       }
     }
   }
@@ -75,17 +77,9 @@
   }
 
   :root {
-    /* primary color */
     --Lime-Green: 163, 72%, 41%;
     --Bright-Red: 356, 69%, 56%;
     --ToggleLight: 230, 22%, 74%;
-
     --ToggleBg: linear-gradient(to hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-  }
-
-  :root {
-    --Lime-Green: 163, 72%, 41%;
-    --Bright-Red: 356, 69%, 56%;
-    --ToggleLight: 230, 22%, 74%;
   }
 }
