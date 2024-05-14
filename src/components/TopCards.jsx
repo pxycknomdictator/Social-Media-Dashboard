@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import anime from "animejs";
 
 const TopCards = ({ cards }) => {
   const {
@@ -10,7 +11,62 @@ const TopCards = ({ cards }) => {
     followColors,
     platformIcon,
     arrowIcon,
+    uniqueId,
   } = cards;
+
+  const animationRef = useRef(null);
+  const numberAnimateRef = useRef(null);
+
+  useEffect(() => {
+    animationRef.current = anime({
+      targets: ".follow",
+      opacity: [0, 1],
+      translateY: [25, 0],
+      duration: 3000,
+    });
+  }, []);
+
+  const launchAnimation = () => {
+    switch (uniqueId) {
+      case 1:
+        numberAnimateRef.current = anime({
+          targets: `.follow-id1`,
+          innerHTML: [0, 1987],
+          easing: "linear",
+          round: 1,
+        });
+        break;
+      case 2:
+        numberAnimateRef.current = anime({
+          targets: `.follow-id2`,
+          innerHTML: [0, 1044],
+          easing: "linear",
+          round: 1,
+        });
+        break;
+      case 3:
+        numberAnimateRef.current = anime({
+          targets: `.follow-id3`,
+          innerHTML: [0, "11k"],
+          easing: "linear",
+          round: 1,
+        });
+        break;
+      case 4:
+        numberAnimateRef.current = anime({
+          targets: `.follow-id4`,
+          innerHTML: [0, 8239],
+          easing: "linear",
+          round: 1,
+        });
+        break;
+
+      default:
+        break;
+    }
+  };
+
+  useEffect(launchAnimation, []);
 
   return (
     <div
@@ -34,7 +90,9 @@ const TopCards = ({ cards }) => {
             {userName}
           </span>
         </figure>
-        <h1 className="font-semibold text-[#1b1e27] dark:text-[#ffffff] text-6xl mt-[1.5rem]">
+        <h1
+          className={`follow-id${uniqueId} follow font-semibold text-[#1b1e27] dark:text-[#ffffff] text-6xl mt-[1.5rem]`}
+        >
           {followers}
         </h1>
         <span className="inline-block text-[#bdbfcb] dark:text-[#6c7699] font-semibold mt-1 tracking-[4px]">

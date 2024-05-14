@@ -35,5 +35,5 @@
 
 
 ```
-If want to be a fellow developer, press the follow button! 💙
+If you want to be a fellow developer, press the follow button! 💙
 ```
